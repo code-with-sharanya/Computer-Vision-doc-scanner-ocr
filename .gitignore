@@ -7,3 +7,5 @@ output_demo/
 scanner.log
 *.egg-info/
 .DS_Store
+report/
+build_report.js
