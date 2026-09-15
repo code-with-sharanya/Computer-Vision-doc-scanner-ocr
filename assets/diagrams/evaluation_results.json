@@ -1,0 +1,82 @@
+[
+  {
+    "angle_px_offset": 0,
+    "noise_sigma": 0,
+    "mean_confidence": 95.6,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.656
+  },
+  {
+    "angle_px_offset": 0,
+    "noise_sigma": 15,
+    "mean_confidence": 95.8,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.548
+  },
+  {
+    "angle_px_offset": 10,
+    "noise_sigma": 0,
+    "mean_confidence": 96.0,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.55
+  },
+  {
+    "angle_px_offset": 10,
+    "noise_sigma": 15,
+    "mean_confidence": 95.8,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.548
+  },
+  {
+    "angle_px_offset": 20,
+    "noise_sigma": 0,
+    "mean_confidence": 96.0,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.533
+  },
+  {
+    "angle_px_offset": 20,
+    "noise_sigma": 15,
+    "mean_confidence": 95.6,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.522
+  },
+  {
+    "angle_px_offset": 30,
+    "noise_sigma": 0,
+    "mean_confidence": 95.8,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.521
+  },
+  {
+    "angle_px_offset": 30,
+    "noise_sigma": 15,
+    "mean_confidence": 96.0,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.538
+  },
+  {
+    "angle_px_offset": 45,
+    "noise_sigma": 0,
+    "mean_confidence": 92.6,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.506
+  },
+  {
+    "angle_px_offset": 45,
+    "noise_sigma": 15,
+    "mean_confidence": 95.4,
+    "word_count": 5,
+    "word_error_rate": 0.0,
+    "elapsed_sec": 0.55
+  }
+]
