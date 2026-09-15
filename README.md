@@ -124,7 +124,45 @@ page with printed text against a dark background) so it needs no external
 sample files, and validates all three modules independently plus their
 error-handling paths.
 
-## Screenshots
+## Screenshots / Results
 
-See `assets/diagrams/` for architecture and workflow diagrams, and
-`output_demo/` (generated after running the CLI) for example output images.
+Example run on a synthetically generated test photo (a skewed page against a
+dark background — see `tests/test_pipeline.py`):
+
+**Input** — raw photo, document at an angle:
+
+![Input photo](assets/screenshots/0_input_photo.jpg)
+
+**Module 1 output** — perspective-corrected, de-skewed document:
+
+![Warped output](assets/screenshots/1_warped.jpg)
+
+**Module 2 output** — enhanced, binarized scan (ready for OCR):
+
+![Enhanced output](assets/screenshots/2_enhanced.jpg)
+
+**Module 3 output** — extracted text (`3_result.json`, truncated):
+
+```json
+{
+  "text": "HELLO WORLD\n\nComputer Vision Test",
+  "mean_confidence": 96.0,
+  "word_count": 5,
+  "words": [
+    { "text": "HELLO", "confidence": 96.0, "bbox": { "x": 44, "y": 66, "w": 137, "h": 37 } },
+    { "text": "WORLD", "confidence": 96.0, "bbox": { "x": 206, "y": 66, "w": 151, "h": 37 } }
+  ]
+}
+```
+
+**CLI summary output:**
+
+```
+===== Document Scanner + OCR — Summary =====
+Words extracted:    5
+Mean OCR confidence:96.0%
+Time elapsed:       0.59s
+=============================================
+```
+
+For architecture and workflow diagrams, see `assets/diagrams/`.
