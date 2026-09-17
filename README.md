@@ -6,8 +6,13 @@ extracts its text via OCR — no GUI required, no cloud API, fully offline.
 
 Built for CSE3010 (Computer Vision), VIT Bhopal — "Build Your Own Project."
 
+## Documentation
+
+Full project report: [CSE3010 PROJECT REPORT.pdf](CSE3010%20PROJECT%20REPORT.pdf)
+
 ## Table of Contents
 
+- [Documentation](#documentation)
 - [Why This Exists](#why-this-exists)
 - [Features](#features)
 - [Project Structure](#project-structure)
