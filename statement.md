@@ -75,6 +75,13 @@ report):**
 - A graphical user interface of any kind, per the assignment's CLI
   requirement.
 
+## Assumptions and constraints
+
+- The input photo contains one document, mostly within the frame.
+- Tesseract OCR is installed and reachable on the system `PATH` as a separate system dependency; this isn't bundled with the Python package.
+- The document's text is printed, not handwritten.
+- If no clean four-point document boundary can be found (low contrast, a document filling the entire frame with no visible edge), the pipeline falls back to processing the full image rather than failing outright. This trades a possibly imperfect result for reliability: the run completes and the OCR confidence scores in the output flag whether the result should be trusted.
+
 ## Target Users
 
 - **Students and researchers** who need to quickly digitize lecture notes,
@@ -88,6 +95,10 @@ report):**
   end-to-end from a terminal with a single, well-documented command and
   verify its output against the stated functional and non-functional
   requirements.
+
+## Who this is for
+
+Primarily written for this course's evaluation, where the brief calls for a command-line-executable computer vision project covering image enhancement, geometric transforms, and a practical application layered on top. Beyond that, it's a reasonable starting point for anyone who wants a scriptable, offline document-to-text tool: quickly digitizing a stack of printed notes or receipts, or as one stage in a larger automated document-processing pipeline where a GUI scanning app isn't an option.
 
 ## High-Level Features
 
@@ -115,3 +126,11 @@ report):**
   modules connected through explicit, typed data classes
   (`DetectionResult`, `OCRResult`), so each stage's correctness can be
   verified in isolation from the others.
+
+## What "done" looks like
+
+- Given a photo of a document at an angle, the tool produces a visibly flat, de-skewed output image.
+- The enhanced output is a clean, high-contrast binary image regardless of moderate lighting unevenness in the source photo.
+- OCR output includes both a plain-text transcript and structured JSON with confidence and position data for each word.
+- Failure modes are handled explicitly rather than causing a crash: missing files, unreadable images, and undetectable document boundaries all produce a clear error message or a documented fallback rather than an unhandled exception.
+- The codebase is split into independently testable modules, each with unit test coverage, and the full pipeline can also be validated end-to-end via the CLI itself.
