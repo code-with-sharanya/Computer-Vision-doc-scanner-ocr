@@ -8,7 +8,7 @@ Built for CSE3010 (Computer Vision), VIT Bhopal — "Build Your Own Project."
 
 ## Documentation
 
-Full project report: [CSE3010 PROJECT REPORT.pdf](CSE3010%20PROJECT%20REPORT.pdf)
+Full project report: [docs/report.pdf](docs/report.pdf)
 
 ## Table of Contents
 
@@ -69,6 +69,7 @@ doc-scanner-ocr/
 ├── assets/
 │   ├── diagrams/                # architecture / workflow / UML diagrams
 │   └── screenshots/             # example run screenshots (see below)
+├── docs/                       # full project report
 ├── sample_images/               # example input image(s)
 ├── requirements.txt
 ├── README.md
