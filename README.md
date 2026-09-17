@@ -8,6 +8,7 @@ Built for CSE3010 (Computer Vision), VIT Bhopal — "Build Your Own Project."
 
 ## Table of Contents
 
+- [Why This Exists](#why-this-exists)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
@@ -21,6 +22,13 @@ Built for CSE3010 (Computer Vision), VIT Bhopal — "Build Your Own Project."
 - [Performance Notes](#performance-notes)
 - [Screenshots / Results](#screenshots--results)
 - [Known Limitations](#known-limitations)
+- [Possible Extensions](#possible-extensions)
+
+## Why This Exists
+
+Point a phone camera at a printed page and you almost never get it straight. The document is tilted, the corners are at slightly different distances from the lens, the lighting is uneven because someone's shadow is in the shot. None of that stops a human from reading the page, but it wrecks OCR accuracy: Tesseract expects roughly horizontal, evenly lit text, not a trapezoid with a lamp glare down one side.
+
+This project fixes that in three steps: find the page in the photo and warp it back to a flat rectangle, clean up the lighting and binarize it into something that looks like an actual scan, then run OCR and save both the raw text and a structured JSON version with per-word confidence and position.
 
 ## Features
 
@@ -318,3 +326,12 @@ For architecture and workflow diagrams, see `assets/diagrams/`.
   it.
 - Single-image input only; no batch or multi-page mode (see Future
   Enhancements in the project report).
+
+## Possible Extensions
+
+- Accept a directory or a multi-page PDF and process every page in one run.
+- Detect and correct orientation in addition to perspective.
+- Group OCR output into lines and paragraphs instead of a flat word list, using the bounding box data already being collected.
+- Swap Tesseract for a cloud OCR API behind the same `ocr_extractor` interface for better accuracy on messier inputs.
+
+For architecture, use-case, class, and sequence diagrams, see `assets/diagrams/`.
