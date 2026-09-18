@@ -2,9 +2,9 @@
 
 A command-line computer vision pipeline that turns a photo of a document
 (receipt, page, note, form) into a clean, perspective-corrected scan and
-extracts its text via OCR — no GUI required, no cloud API, fully offline.
+extracts its text via OCR - no GUI required, no cloud API, fully offline.
 
-Built for CSE3010 (Computer Vision), VIT Bhopal — "Build Your Own Project."
+Built for CSE3010 (Computer Vision), VIT Bhopal - "Build Your Own Project."
 
 ## Documentation
 
